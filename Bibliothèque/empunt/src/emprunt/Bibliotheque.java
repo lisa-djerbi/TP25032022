@@ -34,7 +34,19 @@ public class Bibliotheque {
 	public void afficherAdherents()
 	{
 		for (Adherent a : adherents)
-			a.afficher();
+			System.out.println(a);
+	}
+	
+	public Adherent rechercherAdherent(int numAdh) throws AdherentNotFoundException
+	{
+		for (Adherent a : adherents)
+		{
+			int n = a.getNumero();
+			if(n == numAdh)
+				return a;
+		}
+		throw new AdherentNotFoundException();
+		
 	}
 
 }

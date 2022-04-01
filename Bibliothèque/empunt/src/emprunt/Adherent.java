@@ -28,9 +28,17 @@ public abstract class Adherent {
 	public abstract int getEmpruntsMax();
 	
 	
-	public void afficher()
+	public String toString ()
 	{
-		System.out.println("Adherent " + numAdh + ", nom : "+ nom+ ", emprunts : " + nbEmprunts);
+		return "Adherent " + numAdh + ", nom : "+ nom+ ", emprunts : " + nbEmprunts;
 	}
+	
+	public abstract String getType();
+
+	public int getNumero() {
+		
+		return numAdh;
+	}
+	
 	
 }

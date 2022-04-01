@@ -7,7 +7,7 @@ public class Exterieur extends Adherent {
 	
 
 	public Exterieur(String nom, String adresse) {
-		super(compteurAdhExt++, nom);
+		super(++compteurAdhExt, nom);
 		this.adresse = adresse;
 	}
 
@@ -18,9 +18,15 @@ public class Exterieur extends Adherent {
 	}
 
 	
-	public void afficher()
+	public String toString()
 	{
-		super.afficher();
-		System.out.println("Exterieur habitant à l'adrsse " + adresse);
+		return super.toString() + "\n" 
+				+ "Exterieur habitant à l'adresse " + adresse;
+	}
+	
+	
+	public String getType()
+	{
+		return "Exterieur";
 	}
 }

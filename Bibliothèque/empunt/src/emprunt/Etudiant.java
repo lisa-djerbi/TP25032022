@@ -17,9 +17,14 @@ public class Etudiant extends Adherent {
 	}
 
 	
-	public void afficher()
+	public String toString ()
 	{
-		super.afficher();
-		System.out.println("Etudiant du département " + dptEtude);
+		return super.toString() + "\n" +
+					"Etudiant du département " + dptEtude;
+	}
+	
+	public String getType()
+	{
+		return "Etudiant";
 	}
 }
